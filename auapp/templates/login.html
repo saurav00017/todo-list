@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block body %}
+	<h1> LogIn </h1>
+	<table border = '2'>
+		<form method = 'POST'>
+			{% csrf_token %}
+			<input type = 'text' placeholder = 'Enter UserName' required name = 'un'>
+			<br><br>
+			<input type = 'password' placeholder = 'Enter Password' required name = 'pw'>
+			<br><br>
+			<input type = 'submit' value = 'LogIn'>
+		</form>
+	</table>
+	{{ msg }}
+{% endblock %}

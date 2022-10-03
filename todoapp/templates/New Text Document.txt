@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block title %} TO-DO List {% endblock %}
+
+{% block body %}
+	<h1>TO-DO List</h1>
+{% endblock %} 

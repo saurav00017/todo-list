@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} Sign Up {% endblock %}
+
+{% block body %}
+	<h1> Signup </h1>
+	<table border = '2'>
+		<form method = 'POST'>
+			{% csrf_token %}
+			<input type = 'text' placeholder = 'Enter UserName' required name = 'un'>
+			<br><br>
+			<input type = 'email' placeholder = 'Enter email' required name = 'em'>
+			<br><br>
+			<input type = 'submit' value = 'SignUp'>
+		</form>
+	</table>
+	<h2>Your password will be sent to you via Email</h2>
+	{{ msg }}	
+{% endblock %}
